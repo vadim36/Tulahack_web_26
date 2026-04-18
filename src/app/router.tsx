@@ -1,7 +1,6 @@
-import { createBrowserRouter, Outlet, redirect } from "react-router-dom";
+import { createBrowserRouter, redirect } from "react-router-dom";
 import { App } from "./App";
 import { ROUTES } from "@/shared/model/routes";
-import { Header } from "@/features/header";
 import { Providers } from "./providers";
 
 export const router = createBrowserRouter([
