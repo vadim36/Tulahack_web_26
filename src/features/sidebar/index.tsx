@@ -19,7 +19,7 @@ const menuItems = [
 export function Sidebar() {
   return (
       <aside
-        className="h-full w-72 bg-gradient-to-b from-white to-gray-50 shadow-xl z-50 transform transition-transform duration-300 border-r border-gray-200 lg:translate-x-0"
+        className="min-h-full w-72 bg-gradient-to-b from-white to-gray-50 shadow-xl border-r border-gray-200"
       >
         <div className="p-6 border-b border-gray-200 flex justify-between items-center">
           <h2 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
