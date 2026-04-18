@@ -14,7 +14,7 @@ export const router = createBrowserRouter([
     children: [
       {
         element: (
-          <div className="flex items-stretch min-h-screen">
+          <div className="flex items-stretch min-h-screen overflow-x-hidden">
             <Sidebar />
             <div className="flex-1">
               <Outlet />
