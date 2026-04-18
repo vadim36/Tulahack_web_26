@@ -1,4 +1,4 @@
-import { createBrowserRouter, redirect } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import { App } from "./App";
 import { ROUTES } from "@/shared/model/routes";
 import { Providers } from "./providers";
@@ -11,6 +11,10 @@ export const router = createBrowserRouter([
       </Providers>
     ),
     children: [
+      {
+        path: ROUTES.HOME,
+        lazy: () => import("@/features/landing/landing.page"),
+      },
       {
         path: ROUTES.FEED,
         lazy: () => import("@/features/feed/feed.page"),
@@ -42,10 +46,6 @@ export const router = createBrowserRouter([
       {
         path: ROUTES.ERROR,
         lazy: () => import("@/features/auth/error.page"),
-      },
-      {
-        path: ROUTES.HOME,
-        loader: () => redirect(ROUTES.FEED),
       },
     ],
   },
