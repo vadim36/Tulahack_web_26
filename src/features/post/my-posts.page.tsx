@@ -9,7 +9,6 @@ import {
   Plus,
   Heart,
   MessageCircle,
-  Bookmark,
 } from "lucide-react";
 
 // Данные пользователя
@@ -127,9 +126,9 @@ function MyPostsPage() {
   const currentPost = userPosts[currentPage];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
+    <div className="min-h-screen bg-linear-to-b from-gray-50 to-gray-100">
       {/* Шапка профиля */}
-      <div className="relative h-64 md:h-80 bg-gradient-to-r from-purple-600 to-pink-600 overflow-hidden">
+      <div className="relative h-64 md:h-80 bg-linear-to-r from-purple-600 to-pink-600 overflow-hidden">
         <img
           src={userData.cover}
           alt="Cover"
@@ -277,7 +276,7 @@ function MyPostsPage() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 pb-10 flex justify-center">
         <button
           onClick={handleAddNewPost}
-          className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full font-medium shadow-lg shadow-purple-200 hover:shadow-xl hover:shadow-purple-300 hover:-translate-y-0.5 transition-all duration-200"
+          className="flex items-center gap-2 px-6 py-3 bg-linear-to-r from-purple-600 to-pink-600 text-white rounded-full font-medium shadow-lg shadow-purple-200 hover:shadow-xl hover:shadow-purple-300 hover:-translate-y-0.5 transition-all duration-200"
         >
           <Plus size={22} />
           <span>Новая анкета</span>

@@ -11,7 +11,7 @@ export const ROUTES = {
   CHATS: "/chats",
   ERROR: "/error",
   MY_POSTS: "/my_posts",
-  BOOKMARKS: "/bookmarks",
+  ACHIEVEMENTS: "/achievements",
 } as const;
 
 export type PathParams = {

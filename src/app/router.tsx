@@ -45,10 +45,6 @@ export const router = createBrowserRouter([
           {
             path: ROUTES.MY_POSTS,
             lazy: () => import("@/features/post/my-posts.page")
-          },
-          {
-            path: ROUTES.BOOKMARKS,
-            lazy: () => import("@/features/post/bookmarks.page")
           }
         ],
       },
