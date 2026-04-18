@@ -1,0 +1,54 @@
+import { NavLink } from "react-router-dom";
+import {
+  User,
+  FileText,
+  PlusCircle,
+  Home,
+  Bookmark,
+} from "lucide-react";
+import { ROUTES } from "@/shared/model/routes";
+
+const menuItems = [
+  { path: ROUTES.ACCOUNT, name: "Профиль", icon: User },
+  { path: ROUTES.MY_POSTS, name: "Мои анкеты", icon: FileText },
+  { path: ROUTES.CREATE_POST, name: "Создать анкету", icon: PlusCircle },
+  { path: ROUTES.FEED, name: "Лента", icon: Home },
+  { path: ROUTES.BOOKMARKS, name: "Закладки", icon: Bookmark },
+];
+
+export function Sidebar() {
+  return (
+      <aside
+        className="h-full w-72 bg-gradient-to-b from-white to-gray-50 shadow-xl z-50 transform transition-transform duration-300 border-r border-gray-200 lg:translate-x-0"
+      >
+        <div className="p-6 border-b border-gray-200 flex justify-between items-center">
+          <h2 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+            Меню
+          </h2>
+        </div>
+
+        <nav className="p-4 space-y-2">
+          {menuItems.map(({ path, name, icon: Icon }) => (
+            <NavLink
+              key={path}
+              to={path}
+              className={({ isActive }) =>
+                `flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 group ${
+                  isActive
+                    ? "bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-md"
+                    : "text-gray-700 hover:bg-gray-100 hover:translate-x-1"
+                }`
+              }
+            >
+              <Icon size={20} />
+              <span className="font-medium">{name}</span>
+            </NavLink>
+          ))}
+        </nav>
+
+        <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-gray-200">
+          <p className="text-center text-sm text-gray-400">v1.0.0</p>
+        </div>
+      </aside>
+  );
+}

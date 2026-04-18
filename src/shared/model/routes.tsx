@@ -6,10 +6,12 @@ export const ROUTES = {
   REGISTER: "/register",
   FEED: "/feed",
   PET_POST: "/pet_post/:petId",
-  LIKED_POSTS: "/liked_posts",
+  ACCOUNT: "/account",
   CREATE_POST: "/create_post",
   CHATS: "/chats",
   ERROR: "/error",
+  MY_POSTS: "/my_posts",
+  BOOKMARKS: "/bookmarks",
 } as const;
 
 export type PathParams = {
