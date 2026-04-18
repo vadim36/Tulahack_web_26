@@ -45,10 +45,6 @@ export function Sidebar() {
             </NavLink>
           ))}
         </nav>
-
-        <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-gray-200">
-          <p className="text-center text-sm text-gray-400">v1.0.0</p>
-        </div>
       </aside>
   );
 }
