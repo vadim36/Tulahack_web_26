@@ -16,7 +16,7 @@ export const router = createBrowserRouter([
         element: (
           <div className="flex items-stretch min-h-screen">
             <Sidebar />
-            <div>
+            <div className="flex-1">
               <Outlet />
             </div>
           </div>

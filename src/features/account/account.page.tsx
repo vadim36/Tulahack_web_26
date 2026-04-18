@@ -99,7 +99,7 @@ function AccountPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 min-w-full">
       {/* Шапка профиля */}
       <div className="relative h-64 md:h-80 bg-gradient-to-r from-purple-600 to-pink-600">
         <img
