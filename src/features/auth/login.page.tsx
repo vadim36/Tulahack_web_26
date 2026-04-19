@@ -15,7 +15,10 @@ function LoginPage() {
 
   const loginMutation = useMutation({
     onMutate: (formData: { email: string; password: string }) => {
-      return $api.post("/auth/login", formData);
+      return $api.post<{accessToken: string; refreshToken: string }>("/auth/login", formData).then(res => {
+        localStorage.setItem("access_token", res.data.accessToken);
+        return res;
+      });
     },
   });
 
@@ -50,7 +53,7 @@ function LoginPage() {
       />
 
       <button
-        onClick={() => navigate(-1)}
+        onClick={() => navigate(ROUTES.REGISTER)}
         className="fixed left-4 top-4 z-20 rounded-full p-3 transition-all hover:opacity-80 hover:scale-105"
         style={{
           backgroundColor: "#767D4E",
@@ -173,18 +176,6 @@ function LoginPage() {
                 }}
               >
                 ВОЙТИ
-              </button>
-
-              <button
-                type="button"
-                onClick={() => navigate("/swipe")}
-                className="rounded-full p-3 transition-all hover:opacity-90"
-                style={{
-                  backgroundColor: "#767D4E",
-                  color: "#E4D5BB",
-                }}
-              >
-                <ArrowRight className="size-5" />
               </button>
             </div>
           </form>

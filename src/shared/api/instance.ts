@@ -8,3 +8,9 @@ export const $api = axios.create({
   },
   withCredentials: true,
 });
+
+export const $privateApi = $api.create({
+  headers: {
+    Authorization: `Bearer ${localStorage.getItem("access_token") ?? " "}`,
+  },
+});
