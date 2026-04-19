@@ -58,7 +58,7 @@ export function PetPost({
     >
       <div className="relative h-96">
         <img
-          src={currentPet.image}
+          src={"/pets/barney.jpg"}
           alt={currentPet.name}
           className="w-full h-full object-cover"
           draggable={false}

@@ -44,7 +44,16 @@ function FeedPage() {
   }
 
   return (
-    <div className="h-screen bg-linear-to-b from-gray-50 to-white font-['Unbounded',sans-serif]">
+    <div
+      className="h-screen bg-linear-to-b from-gray-50 to-white font-['Unbounded',sans-serif]"
+      style={{
+        backgroundImage: "url('/public/image/background.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
+      }}
+    >
       <div className="mx-auto max-w-md px-4 py-4 flex flex-col gap-10">
         <div className="relative h-full flex flex-col gap-5">
           <PetPost
