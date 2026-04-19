@@ -11,13 +11,6 @@ const userData = {
   city: "Тула, Россия",
 };
 
-const savedPosts = [
-  { id: 1, image: "" },
-  { id: 2, image: "" },
-  { id: 3, image: "" },
-  { id: 4, image: "" },
-];
-
 function AccountPage() {
   const savedPostsQuery = useQuery<{pets: PetPost[]}>({
     queryKey: ["saved_posts"],
