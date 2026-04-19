@@ -59,11 +59,11 @@ function AccountPage() {
                 </div>
 
                 {/* Профиль */}
-                <div className="relative mx-auto max-w-[1400px] px-4 sm:px-6 md:px-10 mt-[-80px]">
-                    <div className="flex flex-wrap items-start gap-4 sm:gap-6 md:gap-8">
-                        <div className="relative z-10 shrink-0">
+                <div className="relative mx-auto max-w-[1400px] px-10 mt-[-80px]">
+                    <div className="flex items-start gap-8">
+                        <div className="relative z-10">
                             <div
-                                className="w-32 h-32 sm:w-44 sm:h-44 md:w-56 md:h-56 rounded-full overflow-hidden border-[6px] border-cream shadow-lg bg-white">
+                                className="w-44 h-44 md:w-56 md:h-56 rounded-full overflow-hidden border-[6px] border-cream shadow-lg bg-white">
                                 <img
                                     src={userData.avatar}
                                     alt={userData.name}
@@ -72,34 +72,34 @@ function AccountPage() {
                             </div>
                         </div>
 
-                        <div className="flex-1 min-w-[240px] relative pt-10 md:pt-28">
+                        <div className="flex-1 relative pt-28">
                             <img src={"/figma/image 40.png"}
-                                 className="hidden lg:block absolute z-[1] top-0 -left-30 w-[600px] h-auto object-contain pointer-events-none"/>
+                                 className="absolute z-1 top-0 -left-30 w-150 h-full object-cover"/>
                             <img src={"/figma/image 44.png"}
-                                 className="hidden lg:block absolute z-0 top-45 -left-30 w-[580px] h-auto object-contain pointer-events-none"/>
+                                 className="absolute z-0 top-45 -left-30 w-145 h-100% object-cover"/>
                             <div className="relative z-10">
-                                <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl text-black leading-none break-words">
+                                <h1 className="font-serif text-5xl md:text-6xl text-black leading-none">
                                     {userData.name}
                                 </h1>
-                                <p className="mt-4 text-paper-muted text-base sm:text-lg md:text-xl break-all">{userData.email}</p>
-                                <p className="mt-1 text-paper-muted text-base sm:text-lg md:text-xl">{userData.city}</p>
+                                <p className="mt-4 text-paper-muted text-xl">{userData.email}</p>
+                                <p className="mt-1 text-paper-muted  text-xl">{userData.city}</p>
                             </div>
                         </div>
 
-                        <div className="w-full md:w-auto flex flex-col items-start md:items-end gap-4 md:pt-28">
-                            <div className="flex flex-wrap relative gap-3">
+                        <div className="flex flex-col items-end gap-4 pt-28">
+                            <div className="flex relative gap-3">
                                 <img src={"/figma/ibuprofen-patch.png"}
-                                     className="hidden lg:block absolute top-1/3 -left-3/5 w-40 h-40 object-cover pointer-events-none"/>
+                                     className="absolute top-1/3 -left-3/5 w-40 h-40 object-cover"/>
                                 <button
-                                    className="px-6 sm:px-8 py-3 rounded-full bg-olive text-cream text-base sm:text-lg hover:brightness-95 transition">
+                                    className="px-8 py-3 rounded-full bg-olive text-cream text-lg hover:brightness-95 transition">
                                     Редактировать
                                 </button>
                                 <button
-                                    className="px-6 sm:px-8 py-3 rounded-full border-[3px] border-olive text-olive text-base sm:text-lg hover:bg-olive hover:text-cream transition">
+                                    className="px-8 py-3 rounded-full border-[3px] border-olive text-olive text-lg hover:bg-olive hover:text-cream transition">
                                     Настройки
                                 </button>
                                 <img src={"/figma/flower.png"}
-                                     className="hidden lg:block absolute top-1/3 left-1/2 h-100 object-cover pointer-events-none"/>
+                                     className="absolute top-1/3 left-1/2 h-100 object-cover"/>
                             </div>
                         </div>
                     </div>

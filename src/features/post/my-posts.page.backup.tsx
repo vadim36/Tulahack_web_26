@@ -74,10 +74,10 @@ function MyPostsPage() {
         </div>
 
         {/* Профиль */}
-        <div className="relative mx-auto max-w-[1400px] px-4 sm:px-6 md:px-10 mt-[-80px]">
-          <div className="flex flex-wrap items-start gap-4 sm:gap-6 md:gap-8">
-            <div className="relative z-10 shrink-0">
-              <div className="w-32 h-32 sm:w-44 sm:h-44 md:w-56 md:h-56 rounded-full overflow-hidden border-[6px] border-cream shadow-lg bg-white">
+        <div className="relative mx-auto max-w-[1400px] px-10 mt-[-80px]">
+          <div className="flex items-start gap-8">
+            <div className="relative z-10">
+              <div className="w-44 h-44 md:w-56 md:h-56 rounded-full overflow-hidden border-[6px] border-cream shadow-lg bg-white">
                 <img
                   src={userData.avatar}
                   alt={userData.name}
@@ -86,16 +86,16 @@ function MyPostsPage() {
               </div>
             </div>
 
-            <div className="flex-1 min-w-0 relative pt-10 md:pt-28">
+            <div className="flex-1 relative pt-28">
               <img src={"/figma/image 40.png"}
-                   className="hidden lg:block absolute z-[1] -top-3 -left-30 w-[600px] h-auto object-contain pointer-events-none"/>
+                   className="absolute z-1 -top-3 -left-30 w-146 h-100% object-cover"/>
               <img src={"/figma/image 44.png"}
-                   className="hidden lg:block absolute z-0 top-45 -left-30 w-[580px] h-auto object-contain pointer-events-none"/>
+                   className="absolute z-0 top-45 -left-30 w-145 h-100% object-cover"/>
               <div className="relative mt-5 z-10">
-                <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl text-black leading-none break-words">
+                <h1 className="font-serif text-5xl md:text-6xl text-black leading-none">
                   {userData.name}
                 </h1>
-                <img src={"/figma/cats-pair.png"} className="hidden lg:block absolute left-175 -top-20 h-60 w-60 pointer-events-none"/>
+                <img src={"/figma/cats-pair.png"} className="absolute left-175 -top-20 h-60 w-60"/>
               </div>
             </div>
           </div>
@@ -105,7 +105,7 @@ function MyPostsPage() {
 
         {/* Книжный разворот */}
         <div className="relative mx-auto max-w-[1400px] px-10 mt-12 pb-20">
-          <div className="relative isolate mx-auto flex items-stretch justify-center gap-2 sm:gap-4 w-full max-w-[1200px] aspect-[1200/760] min-h-[420px]">
+          <div className="relative isolate mx-auto flex items-stretch justify-center gap-4 w-[1200px] h-[760px]">
             <img
               src={"/figma/open-book.png"}
               className="absolute inset-0 -z-10 w-full h-full object-fill pointer-events-none select-none"

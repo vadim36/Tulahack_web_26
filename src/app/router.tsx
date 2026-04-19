@@ -14,7 +14,7 @@ export const router = createBrowserRouter([
     children: [
       {
         element: (
-          <div className="flex items-stretch min-h-screen overflow-x-hidden">
+          <div className="flex items-stretch min-h-screen">
             <Sidebar />
             <div className="flex-1">
               <Outlet />
@@ -45,6 +45,10 @@ export const router = createBrowserRouter([
           {
             path: ROUTES.MY_POSTS,
             lazy: () => import("@/features/post/my-posts.page")
+          },
+          {
+            path: ROUTES.BOOKMARKS,
+            lazy: () => import("@/features/post/bookmarks.page")
           }
         ],
       },
